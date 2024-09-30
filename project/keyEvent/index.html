@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Key Event In Javascrip</title>
+	<style type="text/css" media="screen">
+		.content {
+		    width: 100%;
+		    background: url(../../img/aa.jpg);
+		    display: flex;
+		    background-size: 100% 100%;
+		    justify-content: center;
+		    align-items: center;
+		    background-repeat: no-repeat;
+		    height: 100vh;
+		}
+
+		form#form {
+		    background: rgb(225 220 220 / 40%);
+		    padding: 29px;
+		    border-radius: 10px;
+		}
+
+		p {
+		    font-weight: bold;
+		    font-size: 22px;
+		    color: rgb(27 160 214);
+		    font-family: math;
+		    text-shadow: 0px 1px 1px #454a5b;
+		}
+
+		input {
+		    height: calc(15px + 15px);
+		    border-radius: 10px;
+		    background: #ecdfff;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<form id="form">
+			<p>onKeyDown:</p>
+			<input type="text" id="onDown" placeholder="Type...">
+			<p>onKePress:</p>
+			<input type="text" id="onPress" placeholder="Type...">
+			<p>onKeyUp:</p>
+			<input type="text" id="onUp" placeholder="Type...">
+		</form>
+	</div>	
+
+<script type="text/javascript">
+	var keyDown = document.getElementById('onDown');
+	var keyPress = document.getElementById('onPress');
+	var keyUp = document.getElementById('onUp');
+
+	var form = document.getElementById('form');
+
+	keyDown.addEventListener('keydown', function(){
+		form.style.backgroundColor = this.value;
+	});
+
+	keyPress.addEventListener('keypress', function(){
+		form.style.backgroundColor = this.value;
+	});
+	
+	keyUp.addEventListener('keyup', function(){
+		form.style.backgroundColor = this.value;
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Test Javascript</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		 
+	</style>
+</head>
+<body>
+	<h1 id="content" class="content"></h1>
+
+	<div class="tableContent">
+		<table border="2" width="100%">
+			<caption>table title and/or explanatory text</caption>
+			<thead>
+				<tr>
+					<th>Sr</th>
+					<th>Name</th>
+					<th>Mobile</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
+				<script type="text/javascript">
+					var tr = document.createElement('tr');
+					for(var i = 0; i < 4; i++){
+						document.write("<td>"+i+"</td>")
+					}
+					document.querySelector('tbody').appendChild(tr);
+				</script>
+				<tr>
+					
+				</tr>
+			</tbody>
+		</table>
+	</div>	
+
+	<div id="loopContent">
+	</div>
+
+	<script type="text/javascript" charset="utf-8" async defer>
+
+		setInterval(display,500)
+		
+		function display(){
+			var time = new Date();
+			var hur = time.getHours();
+			var min = time.getMinutes();
+			var sec = time.getSeconds();
+
+			if (hur > 12) {
+				hur = hur - 12;
+			}
+
+			if (hur == 0) {
+				hur = 12;
+			}
+			
+			if (hur < 10) {
+				hur = '0'+hur;
+			}
+
+			if (min < 10) {
+				min = '0'+min;
+			}
+			if (sec < 10) {
+				sec = '0'+sec;
+			}
+			document.getElementById('content').innerHTML = hur+' : '+min+' : '+sec;
+		}
+		
+		for(var x = 1;x<=7;x++){
+			document.write('<br>');
+			for(var i = 1;i<=10;i++){
+				document.write(x+" * "+i+" => "+x*i+"<br>")
+			}
+		}
+		
+		
+	</script>
+</body>
+</html>

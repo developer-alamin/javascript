@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Input Addition</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+	<input type="number" id="firstNum" placeholder="Add Number">
+	<input type="number" id="secondNum" placeholder="Second Number">
+	<button type="click" id="add">Addtion</button>
+
+	<h3 id="result"></h3>
+	<script type="text/javascript" charset="utf-8" async defer>
+
+		var add = document.getElementById('add');
+		add.addEventListener('click',function (){
+			var first,second;
+			 first = document.getElementById('firstNum').value;
+  			 second = document.getElementById('secondNum').value;
+
+  			 first = Number(first);
+  			 second = Number(second);
+  			 var result = first+second;
+  			 document.getElementById('result').innerHTML = first+'+'+second+' = '+result;
+
+		});
+	</script>
+</body>
+</html>

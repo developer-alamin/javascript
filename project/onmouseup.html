@@ -1,0 +1,59 @@
+ <html>
+<head>
+<style>
+#demo{color:green;font-size:25px;}
+p#para {font-size: 50px;color: green;text-shadow: 1px 2px 1px red;}
+</style>
+</head>
+<body id="body">
+
+	<h1 id="demo"></h1>
+	<br><br><br>
+	<p>Text:</p>
+	<textarea id="text" rows="4" cols="50" placeholder="Type..."></textarea>
+	<button type="button" id="textButton">Start Me</button>
+	<p id="para"></p>
+<script>
+	var x = 0;
+	var txt = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+	var speed = 20;
+
+	window.addEventListener('load',MyFunction);
+	function MyFunction(){
+
+		if(x < txt.length) {
+	 		document.getElementById('demo').innerHTML += txt.charAt(x);
+			x++;
+	 		setTimeout(MyFunction,speed)
+		}
+	}
+
+	var textButton = document.getElementById('textButton');
+	textButton.addEventListener('click', textFunction);
+
+	var textNum = 0;
+	var textSpeed = 50;
+
+	function textFunction(){
+
+		var text = document.getElementById('text').value;
+
+		if (text.length == '') {
+			alert('Please Something Type....')
+		}else if (textNum < text.length) {
+			if (textNum == 10 || textNum == 20 || textNum == 30 || textNum == 40 || textNum == 50 || textNum == 60 || textNum == 70 || textNum == 80 || textNum == 90 || textNum == 100) {
+				alert("Text Is "+textNum)
+			}
+			document.querySelector("#para").innerHTML += text.charAt(textNum);
+			textNum++;
+			setTimeout(textFunction,textSpeed)
+		}
+
+
+	}
+	
+
+</script>
+</body>
+</html>
+ 

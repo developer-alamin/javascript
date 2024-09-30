@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		const a = [20,3,4,6,10];
+		document.write(a+" ..First Array <br>")
+		const b = [100,233,43,9,6,20,10];
+		document.write(b+" ..Second Array <br>")
+		const c = b.filter((d)=>{
+			return a.includes(d);
+		});
+		document.write(c)
+	</script>
+</body>
+</html>

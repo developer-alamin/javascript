@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javscript Event And Odd</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<h5 id="eo-result"></h5>
+	<script type="text/javascript" charset="utf-8" async defer>
+		var prompt = prompt('Enter Your Number');
+
+		var prompt = Number(prompt);
+		var reult = document.getElementById('eo-result');
+		function evenodd(prompt){
+			if (prompt % 2 == 0) {
+				reult.innerHTML = prompt+" Number Is A Even";
+			}else {
+				reult.innerHTML = prompt+" Number Is A Odd";
+			}
+		}
+		evenodd(prompt);
+
+	</script>
+</body>
+</html>

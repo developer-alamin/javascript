@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Table By Nasted Loop</title>
+	<style type="text/css" media="screen">
+		table,td{
+			border: 2px solid red;
+
+		}
+	</style>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		var promt = prompt('Enter Number',20);
+		var table = document.createElement('table');
+		for(var row = 1;row<= promt;row = row+5){
+			var tr = document.createElement('tr'); 
+			for(var col = row;col<row+5;col++){
+				var td = document.createElement('td');
+				tr.appendChild(td);
+				td.innerHTML = col;
+			}
+			table.appendChild(tr);
+		}
+		document.body.appendChild(table)
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		
+	</style>
+</head>
+<body>
+	
+	<script type="text/javascript" charset="utf-8" async defer>
+		var Running = true;
+		while (Running) {
+			var rand = Math.round(Math.random() * 10);
+			if (rand === 9 ) {
+				document.write('You Are Winner '+ rand);
+				Running = false;
+			}else {
+				document.write(rand+' You Are Not Winner <br>');
+			}
+			
+		}
+	</script>
+</body>
+</html>

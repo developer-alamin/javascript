@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javscript Leap Year</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<input type="number" id="number" placeholder="Please Year">
+		<button type="click" id="button">Result</button>
+		<br><br>
+		<h4 id="result"></h4>
+
+
+		<script type="text/javascript" charset="utf-8" async defer>
+			var button = document.getElementById('button');
+			var result = document.getElementById('result');
+
+			button.addEventListener('click',function (){
+
+				var number = document.getElementById('number').value;
+
+				if ((number%4 == 0) && (!number%100 == 0) || (number%400 == 0)){
+					result.innerHTML = number+" This Year Leap Year";
+				}else {
+					result.innerHTML = number+" This Year Not Leap Year";
+				}
+			});
+
+		</script>
+	</body>
+</html>

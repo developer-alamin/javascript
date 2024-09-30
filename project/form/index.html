@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event Form In Javascript....</title>
+	<style type="text/css" media="screen">
+		.content {
+		    width: 100%;
+		    height: 100vh;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+		form {
+		    background: gainsboro;
+		    padding: 16px;
+		    border-radius: 10px;
+		}
+		input {
+		    height: calc(10px + 14px);
+		    border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<form action="" method="get" accept-charset="utf-8">
+			<p>Input:</p>
+			<input type="text" id="oninput" placeholder="Type...">
+			<p id="inputPara"></p>
+			<p>onKeyDown:</p>
+			<input type="text" id="ondown" placeholder="Type...">
+			<p id="downPara"></p>
+			<p>onKeyPress:</p>
+			<input type="text" id="onpress" placeholder="Type...">
+			<p id="onpressPara"></p>
+			<p>onKeyUp:</p>
+			<input type="text" id="onUp" placeholder="Type...">
+			<p id="upPara"></p>
+		</form>
+	</div>
+
+
+<script type="text/javascript">
+	var input,KeyDown,KeyPress,onKeyUp,input,inputPara,downPara,onpressPara,upPara;
+	 oninput = document.getElementById('oninput');
+	 KeyDown = document.getElementById('ondown');
+	 KeyPress = document.getElementById('onpress');
+	 onKeyUp = document.getElementById('onUp');
+	 inputPara = document.getElementById('inputPara');
+	 downPara = document.getElementById('downPara');
+	 onpressPara = document.getElementById('onpressPara');
+	  upPara = document.getElementById('upPara');
+
+
+	oninput.addEventListener('input',function(){
+
+		if (this.value.length == "") {
+			inputPara.innerHTML = "";
+		}else if(!(this.value == "alamin")){	
+			inputPara.innerHTML = "Please Corect Name";
+		}else{
+			inputPara.innerHTML = "";
+		}
+	});
+	KeyDown.addEventListener('keydown',function(){
+
+		if (this.value.length == "") {
+			downPara.innerHTML = "";
+		}else if(!(this.value == "alamin")){	
+			downPara.innerHTML = "Please Corect Name";
+		}else{
+			downPara.innerHTML = "";
+		}
+	});
+
+	 KeyPress.addEventListener('keypress',function(){
+
+		if (this.value.length == "") {
+			onpressPara.innerHTML = "";
+		}else if(!(this.value == "alamin")){	
+			onpressPara.innerHTML = "Please Corect Name";
+		}else{
+			onpressPara.innerHTML = "";
+		}
+	});
+ 	onKeyUp.addEventListener('keyup',function(){
+
+		if (this.value.length == "") {
+			upPara.innerHTML = "";
+		}else if(!(this.value == "alamin")){	
+			upPara.innerHTML = "Please Corect Name";
+		}else{
+			upPara.innerHTML = "";
+		}
+	});
+
+	 
+	 
+	
+</script>
+</body>
+</html>

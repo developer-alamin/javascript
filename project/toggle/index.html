@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Toggle in Javascript</title>
+	<style type="text/css" media="screen">
+		body.active{
+			background: gray;
+		}
+		div#Toggle {
+		    width: 400px;
+		    height: 200px;
+		    background: gainsboro;
+		    border-radius: 100px;
+		    position: relative;
+		    display: block;
+		    box-shadow: 1px 0px 2px 2px #bfb4b4;
+		    cursor: pointer;
+		    transition: 5s;
+		}
+
+		i#indicate {
+		    height: 200px;
+		    position: absolute;
+		    width: 200px;
+		    background: #bde7bd;
+		    border-radius: 100%;
+		    transform: scale(0.9);
+		    cursor: pointer;
+		    transition: 5s;
+		}
+		#indicate.active{
+			left: 200px;
+			transition: 5s;
+		}
+	</style>
+</head>
+<body id="body">
+		
+	<div id="Toggle">
+		<i id="indicate"></i>
+	</div>
+
+	<script type="text/javascript">
+		var body = document.querySelector('body');
+		var indicate = document.getElementById('indicate');
+		indicate.addEventListener('click',function(){
+			indicate.classList.toggle('active');
+			body.classList.toggle('active');
+		})
+	</script>
+</body>
+</html>

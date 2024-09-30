@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: "Roboto", sans-serif;
+		}
+
+		html,
+		body {
+			height: 100%;
+		}
+
+		body {
+			background-color: #f1f5f8;
+		}
+
+		#txt {
+			text-align: center;
+		}
+
+		.btn_container {
+			padding: 10px;
+			text-align: center;
+		}
+
+		#btn {
+			border-radius: 4px;
+			cursor: pointer;
+			padding: 4px 8px;
+			background-color: white;
+			font-size: 1.2em;
+			letter-spacing: 1px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2 id="txt">Switch tab to change the background color.</h2>
+	<div class="btn_container">
+		<button id="btn">Original Color</button>
+		<button id="button">Click</button>
+	</div>
+</body>
+<script>
+	const ogcolor = "#f1f5f8";
+	const newcolor = "#39a9cb";
+	const txt = document.getElementById("txt");
+	const btn = document.getElementById("btn");
+	const buttons = document.getElementById("button");
+	console.log(file_get_contents("https://httpbin.org/get"));
+		
+		// document.addEventListener("visibilitychange",function(){
+		// 	const check = 'http://www.smkproduction.eu5.org';
+		// 	if (check.visibilityState == 'hidden') {
+		// 		console.log('left this site')
+		// 		document.body.style.backgroundColor = newcolor;
+				
+		// 		txt.innerText = "Background color has changed !";
+		// 	}else{
+		// 		document.body.style.backgroundColor = ogcolor;
+		// 		console.log('retured this site')
+		// 	}
+		// })
+
+
+	
+
+	btn.addEventListener("click", function () {
+		txt.innerText = "Switch tab to change the background color.";
+		document.body.style.backgroundColor = ogcolor;
+	});
+</script>
+</html>
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Light On And Off In Javascript</title>
+
+	<style type="text/css" media="screen">
+
+	</style>
+
+</head>
+<body>
+	<img src="../../img/off.png" id="offLight" alt="">
+	<button type="button" onclick="active('on')">On</button>
+	<button type="button" onclick="active('off')">Off</button>
+
+
+
+<script type="text/javascript">
+
+		function active(type){
+			document.querySelector('img').src = "../../img/"+type+'.png';
+		}
+
+
+</script>
+</body>
+</html>

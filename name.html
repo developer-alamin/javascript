@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Name Pattern In Javascript</title>
+	<style type="text/css" media="screen">
+		body {
+			background: black;
+		    display: flex;
+		    height: 100vh;
+		    justify-content: center;
+		    align-items: center;
+		}
+		div.row_content{
+			display: flex;
+		}
+		.n_Collunm {
+		    margin-left: 11px;
+		}
+
+		.i_Collunm {
+		    margin-left: 4px;
+		}
+		.a_Collunm {
+			color: #3df900;
+			font-weight: bold;
+			font-size: 30px;
+			font-family: initial;
+		}
+
+		.l_Collunm {
+			font-size: 30px;
+			color: #ff0000;
+		}
+		
+		.m_Collunm {
+			font-size: 30px;
+			color: #ffd714;
+		}
+
+		.i_Collunm {
+			font-size: 30px;
+			color: #d800ff;
+		}
+
+		.n_Collunm {
+			color: #33ff00;
+			font-size: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		function a(){
+			for(var row = 0;row<=7;row++){
+				for(var col = 0;col<= 7;col++){
+					if (((row == 0 || row == 3) && col > 1 && col < 5) || (col == 1 && (row == 1 || row == 2 || row == 3 || row == 4 || row == 5 || row == 6)) || (col == 6 &&(row == 1 || row == 2 || row == 4 || row ==5 || row ==6))) {
+						document.write("*")
+					}
+					document.write("&nbsp;&nbsp;")
+				}
+				document.write('<br>')
+			}
+		}
+		function l(){
+			for(var row = 0; row <= 6; row++){
+				for(var col = 0; col <= 7; col++){
+					if ((col == 0 || row == 6) && col < 6) {
+						document.write("* ");
+					}else{
+						document.write("&nbsp;&nbsp;")
+					}
+				}
+				document.write('<br>');
+			}
+			
+		}
+
+		function m(){
+			for(var row = 0; row <= 6; row++){
+				for(var col = 0; col <= 12; col++){
+					if (((col == 0 || col == 12) && col >= 0 && col <= 12) || (col == 2 && (row == 1)) || (col == 3 && (row == 2)) || (col == 4 && (row == 3))  || (col == 6 && (row == 3)) || (col == 10 && (row == 1)) || (col == 9 && (row == 2)) || (col == 8 && (row == 3)) )  {
+						document.write("*")
+					}else{
+						document.write("&nbsp;&nbsp;")
+					}
+					 
+				}
+				document.write('<br>');
+			}
+		}
+
+
+		function i(){
+			for(var row = 0; row <= 6; row++){
+				for(var col = 0; col <= 7; col++){
+					if ((col == 4 || row == 0 || row == 6) && col > 1 && col <= 6) {
+						document.write("*");
+					} else {
+						document.write("&nbsp;&nbsp;")
+					}
+				 	
+				}
+				document.write('<br>');
+			}
+		}
+		function n(){
+			for(var row = 0; row <= 6; row++){
+				for(var col = 0; col <= 8; col++){
+					if ((col == 0 || col == 8) || col == row) {
+						document.write("*");
+					} else {
+						document.write("&nbsp;&nbsp;")
+					}
+				 	
+				}
+				document.write('<br>');
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="content">
+		<div class="row_content">
+			<div class="a_Collunm">
+				<script type="text/javascript">a()</script>
+			</div>
+			<div class="l_Collunm">
+				<script type="text/javascript">l()</script>
+			</div>
+			<div class="a_Collunm">
+				<script type="text/javascript">a()</script>
+			</div>
+			<div class="m_Collunm">
+				<script type="text/javascript">m()</script>
+			</div>
+			<div class="i_Collunm">
+				<script type="text/javascript">i()</script>
+			</div>
+			<div class="n_Collunm">
+				<script type="text/javascript">n()</script>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

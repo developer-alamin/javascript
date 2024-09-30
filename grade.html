@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Result Grade By Javascript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<input type="number" id="gradeInput" placeholder="Resule Number">
+	<button type="click" id="button">Result</button>
+	<br><br><br>
+	<h1 id="result"></h1>
+
+
+	<script type="text/javascript" charset="utf-8" async defer>
+	
+
+	var button = document.getElementById('button');
+	var result = document.getElementById('result');
+
+	button.addEventListener('click',function (){
+		var grade = document.getElementById('gradeInput').value;
+		var grade = new Number(grade);
+
+		if (grade > 100) {
+			result.innerHTML = grade+" This Number Is Wrong ";
+		}else if (grade >= 80 ) {
+			result.innerHTML = grade+" This Grade Point A+";
+		}else if (grade >= 70) {
+			result.innerHTML = grade+" This Grade Point A";
+		}else if (grade >= 60) {
+			result.innerHTML = grade+" This Grade Point A-";
+		}else if (grade >= 50) {
+			result.innerHTML = grade+" This Grade Point B";
+		}else if (grade >= 40) {
+			result.innerHTML = grade+" This Grade Point C";
+		}else if (grade >= 33) {
+			result.innerHTML = grade+" This Grade Point D";
+		}else {
+			result.innerHTML = grade+" This Point Fail";
+		}
+	});	
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array In Javascript</title>
+</head>
+<body>
+
+	<p>Name:</p>
+	<textarea id="text" rows="10" cols="50" style="resize: none;"></textarea>
+	<button type="button" id="button">Add Click</button>
+
+
+	<script type="text/javascript" charset="utf-8" async defer>
+		var button = document.getElementById('button');
+		var text = document.getElementById('text');
+
+		button.addEventListener('click',function (){
+			
+			var array = [];
+				for(var i = 0; i < 3; i++){
+					array[i] = prompt('hello');
+				}
+			text.innerHTML = array
+		})
+	</script>
+</body>
+</html>

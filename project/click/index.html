@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Click Event</title>
+	<style type="text/css" media="screen">
+		body.active{
+			background: red;
+		}
+	</style>
+</head>
+<body> 
+		<button type="button" id="button" onmouseout="outFunc()">Click Me</button>
+		<button type="button" id="dbClickbutton">Dobule Click</button>
+
+<script type="text/javascript">
+	var button = document.getElementById('button');
+	var dbClickButton = document.getElementById('dbClickbutton');
+
+	button.addEventListener('click',function(){
+		document.body.classList.toggle('active');
+	});
+
+	dbClickButton.addEventListener('dblclick',function(){
+		alert('This Is Dobule Click');
+	})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RegExp Javascript</title>
+	<style type="text/css" media="screen">
+		.content {
+		    width: 80%;
+		    margin: auto;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="content">
+		<input type="email" id="email" placeholder="Type..."><br><br>
+	
+		<textarea cols="50" rows="5" id="area"></textarea>
+	</div>	
+
+
+	<script type="text/javascript">
+		var eamil = document.getElementById('email');
+		var area = document.getElementById('area');
+
+		eamil.addEventListener('input', function(){
+			
+			var EmailReg = /([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})/;
+			if (this.value == "") {
+				area.innerHTML = '';
+			}else if (EmailReg.test(this.value)) {
+				area.innerHTML = 'Thanks You';
+			}else{
+				area.innerHTML = 'This Email Not Valid';
+			}
+			
+
+		})
+	
+	</script>
+</body>
+</html>

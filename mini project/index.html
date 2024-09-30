@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change color on click</title>
+	<style type="text/css" media="screen">
+		.active{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="reverum_footer_a_phone">
+		
+	</div>
+
+
+
+
+
+
+
+
+		<div class="wrap">
+			<ul>
+				<li class="li">li 1</li>
+				<li class="li">li 2</li>
+				<li class="li">li 3</li>
+				<li class="li">li 4</li>
+				<li class="li">li 5</li>
+				<li class="li">li 6</li>
+			</ul>
+			<hr>
+			<ul>
+				<li class="li">li 1</li>
+				<li class="li">li 2</li>
+				<li class="li">li 3</li>
+				<li class="li">li 4</li>
+			</ul>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$(document).ready(function(){
+			const items = document.querySelectorAll("ul li.li");
+			items.forEach((item,i)=>{
+				item.addEventListener("click",()=>{
+					
+				   $("ul li.li").removeClass("active");
+				    item.classList.add("active");
+				})
+			});
+		})
+		
+	</script>
+</body>
+</html>

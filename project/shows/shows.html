@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shows Zooming in javascript</title>
+	<style type="text/css" media="screen">
+		body {background: linear-gradient(to right , #b5b5df,#6fd6d0, #f1d4d4);}
+		div { width: 400px;height: 400px;border: 2px solid rgb(146 214 170 / 79%);background: url(../../img/vic.jpg);background-size: 100% 100%;position: absolute;overflow: hidden;}
+		div#second {left: 31%;background-size: 642% 541%;display: none;}
+		div#first:hover + div#second{
+			display: block;
+		}
+		span#lens {position: absolute;width: 100px;height: 100px;background: rgb(204 206 221 / 40%);border: 1px solid rgb(147 224 255 / 56%);border-radius: 5px; cursor: pointer;
+		    pointer-events: none;transform: translateX(-55px);display: none}
+	</style>
+</head>
+<body>
+
+	<div id="first">
+		<span id="lens"></span>
+	</div>	
+	<div id="second"></div>
+
+<script type="text/javascript">
+	var first = document.getElementById('first');
+	var lens = document.getElementById('lens');
+	var second = document.getElementById('second');
+
+	first.addEventListener('mousemove',function(e){
+		var x = e.clientX - e.target.offsetLeft;
+		var y = e.clientY - e.target.offsetTop;
+
+		lens.style.display = 'block';
+		lens.style.left = x+'px';
+		lens.style.top = y-50+'px';
+
+		second.style.backgroundPosition = (x-(500/2/6)) * -6 +"px "+ (y-(500/2/6)) * -6 +"px";
+		
+	});
+
+	first.addEventListener('mouseout', function(){
+		lens.style.display = 'none';
+	})
+
+
+
+
+</script>
+</body>
+</html>

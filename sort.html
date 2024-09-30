@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sort function in javascript</title>
+</head>
+<body style="text-align: center;">
+
+	<h1 id="demo"></h1>
+	<button type="button" id="button">Click Me</button>
+
+
+	<script type="text/javascript">
+		var names = ['Bangladesh','India','Korea','Afganistan','Sodi-Arob','Eran'];
+
+
+		document.getElementById('demo').innerHTML = names;
+
+		 document.getElementById('button').addEventListener('click',button);
+
+			function button(){
+				names.sort();
+				document.getElementById('demo').innerHTML = names;
+			}
+
+	</script>
+</body>
+</html>

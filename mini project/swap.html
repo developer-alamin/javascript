@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		img{
+			max-width: 75px;
+			height: auto;
+		}
+		.swap_content {
+		    width: 500px;
+		    margin: auto;
+		}
+
+		.swap_details {
+		    display: flex;
+		    flex-direction: row;
+		    flex-wrap: wrap;
+		    align-content: stretch;
+		}
+
+		.swapColors {
+		    width: 100px;
+		    text-align: center;
+		    cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="swap_content">
+		<div class="swap_details">
+		</div>
+		<h4 class="title_show"></h4>
+	</div>
+	<script>
+		const swaps = [
+         {
+         	title:"240 Pacific Green",
+         	color:"img/Mio3_240.jpg",
+         	img:"green img"
+         },
+         {
+         	title:"611 Moon Rock",
+         	color:"img/Mio3_611.jpg",
+         	img:"blue img"
+         },
+         {
+         	title:"243 Turquoise",
+         	color:"img/Mio3_243.jpg",
+         	img:"blue img"
+         },
+         {
+         	title:"025 Olive",
+         	color:"img/Mio3_025.jpg",
+         	img:"blue img"
+         },
+         {
+         	title:"039 Sage",
+         	color:"img/Mio3_039.jpg",
+         	img:"blue img"
+         },
+         {
+         	title:"180 Beige",
+         	color:"img/Mio3_180.jpg",
+         	img:"blue img"
+         },
+         {
+         	title:"292 Rose Gold",
+         	color:"img/Mio3_292.jpg",
+         	img:"blue img"
+         }
+		];
+
+
+		const swapDetails = document.querySelector(".swap_details");
+		swaps.forEach(function(item,i) {
+			var swap_item = "<div class='swap_item' data-index='"+i+"' data-title='"+item.title+"'><img src='"+item.color+"'></div>";
+			const swapColors = document.createElement("div");
+			swapColors.classList.add("swapColors");
+			swapColors.innerHTML = swap_item;
+			swapDetails.appendChild(swapColors);
+		});
+		const title_show = document.querySelector(".title_show");
+		var swap_item = document.querySelectorAll(".swap_item");
+		swap_item.forEach(function(swindex){
+			swindex.addEventListener("click",function(){
+				var index = swindex.getAttribute("data-index");
+				title_show.innerHTML = swaps[index].title;
+				console.log(swaps[index])
+			})
+
+		});
+		
+	</script>
+</body>
+</html>

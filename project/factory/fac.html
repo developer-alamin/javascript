@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Factory Javascript</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var promt = prompt('Enter Number',1);
+		function Display(n){
+			if (n == 0) {
+				return 1;
+			}else{
+				var num = 1;
+				for(i = 1;i<=n;i++){
+					document.write(num+" * "+i+" = "+(num*=i)+"<br>");	
+				}
+			}
+		}
+		Display(promt);
+
+
+	</script>
+</body>
+</html>

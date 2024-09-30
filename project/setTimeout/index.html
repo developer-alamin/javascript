@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SetTimeout In Javascript</title>
+	<style type="text/css" media="screen">
+		.row {
+		    display: flex;
+		    height: 97vh;
+		    justify-content: flex-start;
+		    align-items: center;
+		    background: #dbdbdb;
+		    flex-wrap: nowrap;
+		    align-content: stretch;
+		}
+
+		div#first {
+		    width: 200px;
+		    height: 200px;
+		    font-size: 67px;
+		    background: white;
+		    margin: 10px;
+		    display: flex;
+		    border-radius: 10px;
+		    justify-content: center;
+		    align-items: center;
+		    font-family: ui-monospace;
+		    color: darkgreen;
+		}
+	</style>
+</head>
+<body>
+	<input type="number" id="int" placeholder="Start Number">
+	<input type="number" id="end" placeholder="End Number">
+	<button type="click" onclick="countInt()">Run</button>
+	<br><br>
+	<div class="row">
+		<div id="first">
+		</div>
+	</div>	
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		var countNum = 1;
+		function counttrigger(){
+			if (countNum > 0) {
+				countNum++;
+				document.getElementById('first').innerHTML = countNum;
+				if (countNum > 0) {
+					var count = setTimeout(counttrigger,1000);
+				}
+				
+				var countEnd = 10;//document.getElementById('end').value;
+				if (countNum == countEnd) {
+					location.reload();
+					clearTimeout(count)
+				}
+			}
+
+		}
+
+		counttrigger();
+	</script>
+</body>
+</html>

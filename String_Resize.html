@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Title Resize..</title>
+	<style type="text/css" media="screen">
+		*{
+			margin:0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<h4 class="title">Hello</h4>
+	<h5 class="subTitle">N Word</h5>
+	<script>
+		const title = document.querySelector(".title");
+		const subTitle = document.querySelector(".subTitle");
+
+		const textsubTitle = subTitle.textContent;
+		const subTitleChatAt = textsubTitle.charAt(0);
+
+		title.innerHTML = title.textContent.concat('',subTitleChatAt);
+
+		const ReplaceSubTitle = textsubTitle.replace("N","");
+		subTitle.innerHTML = ReplaceSubTitle;
+		
+
+
+	</script>
+</body>
+</html>

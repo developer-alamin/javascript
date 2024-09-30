@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Zooming In javascript</title>
+	<style type="text/css" media="screen">
+		body{
+			background: rgb(13 0 157 / 66%);
+		}
+		div{
+		    width: 500px;
+		    height: 500px;
+		     background: url(../../img/blueshows.webp);
+		    background-size: 100% 100%;
+		    position: absolute;
+		  
+		}
+		div#firstDiv {
+		    top: 50%;
+		    left: 14%;
+		    transform: translateY(-50%);
+		    overflow: hidden;
+		}
+
+		div#secondDiv {
+		    top: 50%;
+		    left: 53%;
+		    transform: translateY(-50%);
+		    background-size: 600% 600%;
+		}
+		span#lens {
+		    width: 150px;
+		    height: 150px;
+		    position: absolute;
+		    background: rgb(223 219 216 / 71%);
+		    border-radius: 20px;
+		    pointer-events: none;
+		    transform: translate(-50%,-50%);
+		    border: 2px solid #81be13;
+		}
+	</style>
+</head>
+<body>
+	<div id="firstDiv">
+		<span id="lens"></span>
+	</div>	
+	<div id="secondDiv"></div>
+<script type="text/javascript">
+	var first = document.getElementById('firstDiv');
+	var lens = document.getElementById('lens');
+	var second = document.getElementById('secondDiv');
+
+	first.addEventListener('mousemove',function(e){
+		var x = e.clientX - e.target.offsetLeft;
+		var y = e.clientY - e.target.offsetTop;
+
+		lens.style.left = x+'px';
+		lens.style.top = y+250+'px';
+
+		second.style.backgroundPosition = (x-(500 / 2/ 6)) * -6 +'px ,' + ( y - (500 / 2 / 6) + 250) * -6 +'px';
+
+	})
+
+
+
+
+
+</script>
+</body>
+</html>

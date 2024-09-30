@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css" media="screen">
+		.tab {
+		  overflow: hidden;
+		  border: 1px solid #ccc;
+		  background-color: #f1f1f1;
+		}
+		.tab a {
+	 	  background-color: inherit;
+		  float: left;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 14px 16px;
+		  transition: 0.3s;
+		  font-size: 17px;
+		}
+		.tab a.active{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<a class="tabLink" onclick="openCity(event)">London</a>
+		<a class="tabLink" onclick="openCity(event)">Paris</a>
+		<a class="tabLink" onclick="openCity(event)">Tokyo</a>
+	</div>
+
+	<script type="text/javascript" charset="utf-8" async defer>
+		function openCity(evt) {
+		  var i, tablinks;
+		 
+		  tablinks = document.getElementsByClassName("tabLink");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace("active", "");
+		  }
+		  evt.currentTarget.className += " active";
+		}
+		
+	</script>
+</body>
+</html>

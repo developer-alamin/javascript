@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object in Javascript</title>
+</head>
+<body>
+
+	<h1 id="demo"></h1>
+
+	<script type="text/javascript" charset="utf-8" async defer>
+
+		var users = {
+			names : "Alamin",
+			age : 28,
+			mobile : "01740816676",
+			collage : "Meherpur",
+			village : "Doforpur",
+			country : {'b':'Bangladesh','i':'india','k':'Korea','a':'Afganistan'},
+			func: function (){
+				
+				return this.names+' '+this.age+' '+this.mobile+' '+this.collage+' '+this.village+' '+this.country.i;
+			}
+		}	
+		var demo = document.getElementById('demo');
+		console.log(users)
+	</script>
+</body>
+</html>

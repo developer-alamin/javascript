@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javacsript Vowel And Consonent</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<input type="text" id="vowel" placeholder="Enter Your Text">
+	<button type="click" id="vowelClick">CLick</button>
+	<br><br>
+	<h4 id="vowelResult"></h4>
+
+	<script type="text/javascript" charset="utf-8" async defer>
+		var vowelClick = document.getElementById('vowelClick');
+		var vowelResult = document.getElementById('vowelResult');
+
+		vowelClick.addEventListener('click',function (){
+			var text = document.getElementById('vowel').value;
+			text.toUpperCase();
+			if ((text == 'a') || (text == "e") || (text == "o") || (text == "i") || (text == "u")) {
+				vowelResult.innerHTML = text+' Letter is a Vowel';
+			}else {
+				vowelResult.innerHTML = text+' Letter is a Consonants ';
+			}
+		});
+	</script>
+</body>
+</html>

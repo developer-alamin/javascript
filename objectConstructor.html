@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Object Construction in Javascript</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+		.form_div {text-align: center;}
+
+		.form_row {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+
+		p {
+		    font-weight: bold;
+		    font-size: 24px;
+		    color: darkolivegreen;
+		}
+
+		input {
+		    height: calc(10px + 22px);
+		    border: 2px solid red;
+		    border-radius: 5px;
+		    color: #18ff15;
+		    font-weight: bold;
+		    font-size: 20px;
+		}
+		mark{
+			 color: #18ff15;
+		    font-weight: bold;
+		    font-size: 50px;
+		}
+
+		button#button {
+		    font-size: 21px;
+		    width: 100px;
+		    font-family: fantasy;
+		}
+		h1{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="form_div">
+		<div class="form_row">
+			<p>Name:</p>
+			<input type="text" id="name" placeholder="Enter Your Name">
+			<p>Age:</p>
+			<input type="number" id="age" placeholder="Enter Your Age">
+			<p>Village:</p>
+			<input type="text" id="village" placeholder="Enter Your Village">
+		</div>
+		<button type="button" id="button">Submit</button>
+	</div>
+
+
+	<script type="text/javascript" charset="utf-8" async defer>
+	
+		var button = document.getElementById('button');
+		button.addEventListener('click',function (){
+			var name = document.getElementById('name').value;
+			var age = document.getElementById('age').value;
+			var village = document.getElementById('village').value;
+			
+
+			function student(name,age,village){
+				this.name = name;
+				this.age = age;
+				this.village = village;
+				this.display = function(){
+					var head = document.createElement('h1');
+					head.innerHTML = "My Name Is <mark>"+this.name+"</mark> Age <mark>"+this.age+"</mark> And Village Name <mark>"+this.village+"</mark>";
+					document.body.appendChild(head);
+				}
+			}
+
+			var details = new student(name,age,village);
+			details.display();
+		})
+
+	
+	</script>
+</body>
+</html>

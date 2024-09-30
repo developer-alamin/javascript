@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OnmouseDown Event in javascript</title>
+	<style type="text/css" media="screen">
+		img{
+			width: 400px;
+			height: 400px;
+		}
+
+		body.active{
+		    background-image: url("../../img/alamin.jpg");
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: 400px 400px;
+		}
+		img.img{
+			display: none;
+		}
+		img.none{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="../../img/aa.jpg" id="img" alt="">
+	<img src="../../img/alamin.jpg" class="img" alt="">
+
+	<script type="text/javascript">
+		var img = document.querySelector('#img');
+		var disImg = document.querySelector('.img');
+
+		img.addEventListener('mousedown',function(){
+			disImg.classList.toggle('img');
+		});
+
+		disImg.addEventListener('click',function(){
+			img.classList.toggle('none');
+		})
+
+	</script>
+</body>
+</html>

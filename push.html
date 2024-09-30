@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Push Function in function</title>
+</head>
+<body>
+	<p>Name:</p>
+	<textarea id="text" rows="10" cols="40"></textarea>
+	<button type="button" id="button">Add</button>
+
+	 <script type="text/javascript">
+	 	
+	 	var user = ['Alamin','Maruf','Sojib','Mijan','mofijul','Nahid'];
+
+	 	document.getElementById('text').innerHTML = user;
+
+	 	var button = document.getElementById('button');
+
+	 	button.addEventListener('click',function (){
+	 		user.push('Doforpur','Meherpur');
+	 		document.getElementById('text').innerHTML = user;
+	 	});
+
+	 </script>
+</body>
+</html>
